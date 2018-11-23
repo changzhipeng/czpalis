@@ -1,9 +1,9 @@
 <template>
     <div class="page_detail">
         <div class="pd_header">
-            <span>
+            <router-link to="/">
                 <i class="iconfont icon-fanhui"></i>
-            </span>
+            </router-link>
             <h3 class="detail_title">商品详情</h3>
         </div>
         <div class="pd_main">
@@ -56,6 +56,7 @@ export default {
         }
         .iconfont{
             @include fz(.8rem);
+            color: #fff;
         }
     }
 </style>
