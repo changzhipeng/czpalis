@@ -4,9 +4,9 @@ import Router from 'vue-router'
 import Index from '@/page/index.vue'
 import Mine from '@/page/mine.vue'
 import Recommend from '@/page/recommend.vue'
-import Car from '@/page/car.vue'
+import Cart from '@/page/cart.vue'
 import PageDetails from '@/components/pageDetails'
-
+import Login from '@/page/login.vue'
 
 Vue.use(Router)
 
@@ -28,9 +28,9 @@ export default new Router({
       component: Recommend,
     },
     {
-      path: '/car', //推荐
-      name: 'Car',
-      component: Car,
+      path: '/cart', //推荐
+      name: 'Cart',
+      component: Cart,
     },
     {
       path: '/mine', //我的
@@ -39,7 +39,13 @@ export default new Router({
     },
     {
       path: '/pageDetails',
+      name:'PageDetails',
       component: PageDetails
+    },
+    {
+      path: '/login',
+      name:'Login',
+      component: Login
     },
   ]
 })

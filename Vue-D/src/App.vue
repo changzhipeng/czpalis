@@ -3,13 +3,29 @@
     	<keep-alive exclude="classify,detail">
     		 <router-view></router-view>
     	</keep-alive>   
-		<app-footer></app-footer> 
+		<app-footer v-if="showBottomNav"></app-footer> 
     </div>
 </template>
 
 <script>
-
+export default {
+	data(){
+		return{
+			showBottomNav:true
+		}
+	},
+	watch:{
+		$route(event){
+			if (event.name == 'PageDetails' || event.name == 'Login') {
+				this.showBottomNav = false;
+			} else {
+				this.showBottomNav = true;
+			}
+		}
+	}
+}
 </script>
+
 
 
 <style lang="scss">

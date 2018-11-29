@@ -11,9 +11,6 @@
                     &yen;<span class="price_number">{{price}}</span>
                 </div>
             </div>
-            <div class="carBtn">
-                <i class="iconfont icon-jiarugouwuche"></i>
-            </div>
         </div>
     </div>
 </template>
@@ -30,14 +27,13 @@ export default {
                 title: this.title,
                 content: this.content,
                 price: this.price,
-                count: this.count
+                count: this.count,
+                isInCart:false
             }
         }
-        console.log(indexList)
     },
     methods:{
         goToPageDetails(){
-            console.log(this.indexList)
             this.$router.push({
                 path: '/pageDetails',
                 query: this.indexList
@@ -74,16 +70,6 @@ export default {
         .price{
             @include fz(.375rem);
             color: #e94750;
-        }
-        .carBtn{
-            padding-right: .9375rem;
-            box-sizing: border-box;
-            width: 100%;
-            text-align: right;
-            .icon-jiarugouwuche{
-                @include fz(.9375rem);
-                color: $mainColor;
-            }
         }
     }
 

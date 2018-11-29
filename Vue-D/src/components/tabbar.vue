@@ -8,9 +8,9 @@
                 <img :src="'/recommend' === $route.path ? tabBarImgArr[1].selected : tabBarImgArr[1].normal" alt="推荐">
                 <span :class="{on: '/recommend' === $route.path}">推荐</span>
             </div>
-        <div class="tab-item" @click="switchTo('/car')">
-                <img :src="'/car' === $route.path ? tabBarImgArr[2].selected : tabBarImgArr[2].normal" alt="订单">
-                <span :class="{on: '/car' === $route.path}">订单</span>
+        <div class="tab-item" @click="switchTo('/cart')">
+                <img :src="'/cart' === $route.path ? tabBarImgArr[2].selected : tabBarImgArr[2].normal" alt="订单">
+                <span :class="{on: '/cart' === $route.path}">订单</span>
             </div>
         <div class="tab-item" @click="switchTo('/mine')">
                 <img :src="'/mine' === $route.path ? tabBarImgArr[3].selected : tabBarImgArr[3].normal" alt="我的">
@@ -34,9 +34,8 @@ export default {
     },
     methods:{
         switchTo(path){
-      console.log(this.$router)
-      this.$router.replace(path)
-    }
+            this.$router.replace(path)
+        }
     }
 }
 </script>

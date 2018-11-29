@@ -5,8 +5,8 @@ import AppFooter from './components/tabbar'
 import './base/js/base.js'
 import './base/css/base.scss'
 import 'swiper/dist/css/swiper.css'
-import {store} from './store/index.js'
-
+import store from './store'
+// import './ui/my-own-ui.js'
 // import VueAxios from 'vue-axios'
 import axios from 'axios'
 Vue.prototype.$axios = axios
@@ -37,5 +37,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })

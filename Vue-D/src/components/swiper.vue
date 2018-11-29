@@ -29,7 +29,7 @@ export default {
 	.swiper-box {
 	    width: 100%;
 	    height: 100%;
-	    margin: 0 auto;
+	    margin: 1.46875rem auto 0 auto;
 	    .swiper-item {
 	        height: 5rem;
 	        background: url() no-repeat center/cover;
