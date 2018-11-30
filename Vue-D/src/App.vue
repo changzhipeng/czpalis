@@ -16,7 +16,7 @@ export default {
 	},
 	watch:{
 		$route(event){
-			if (event.name == 'PageDetails' || event.name == 'Login') {
+			if (event.name == 'PageDetails' || event.name == 'Login' || event.name == 'EditAddressPage') {
 				this.showBottomNav = false;
 			} else {
 				this.showBottomNav = true;

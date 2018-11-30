@@ -7,6 +7,9 @@ import Recommend from '@/page/recommend.vue'
 import Cart from '@/page/cart.vue'
 import PageDetails from '@/components/pageDetails'
 import Login from '@/page/login.vue'
+import EditAddressPage from '@/page/editAddressPage.vue'
+import ModifyAddress from '@/page/ModifyAddress.vue'
+import AddNewAddress from '@/page/AddNewAddress.vue'
 
 Vue.use(Router)
 
@@ -36,6 +39,20 @@ export default new Router({
       path: '/mine', //我的
       name: 'Mine',
       component: Mine,
+      children: [
+        // {
+          // path: 'editAddressPage',
+          // component: EditAddressPage
+        // },
+        // {
+        //   path: 'AddNewAddress',
+        //   component: AddNewAddress
+        // },
+        // {
+        //   path: 'ModifyAddress',
+        //   component: ModifyAddress
+        // }
+      ]
     },
     {
       path: '/pageDetails',
@@ -46,6 +63,21 @@ export default new Router({
       path: '/login',
       name:'Login',
       component: Login
+    },
+    {
+      path: '/editAddressPage',
+      name: 'EditAddressPage',
+      component: EditAddressPage
+    },
+    {
+      path: '/AddNewAddress',
+      name: 'AddNewAddress',
+      component: AddNewAddress
+    },
+    {
+      path: '/ModifyAddress',
+      name: 'ModifyAddress',
+      component: ModifyAddress
     },
   ]
 })
